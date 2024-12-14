@@ -1,22 +1,19 @@
-// const jwt = require("jsonwebtoken");
-// const dotenv = require("dotenv");
-// dotenv.config();
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+dotenv.config();
 
-// const roleMiddleware = (req, res, next) => {
-//   const token = req.headers.authorization?.split(" ")[1];
 
-//   if (!token) {
-//     return res.status(401).json({ error: "No token provided" });
-//   }
+const roleMiddleware = (...allowedRoles)=>{
+    return (req, res, next)=>{
+        if(!allowedRoles.includes(req.user.role)){
+            return res.status(403).json({error:"You are not allowed to access this route"});
+        }
+        next();
+    };
+};
+ 
 
-//   try {
-//     const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-//     req.user = decodedToken;
-//     console.log("The decoded user is :", req.userId);
-//     next();
-//   } catch (error) {
-//     return res.status(401).json({ error: "Invalid token" });
-//   }
-// };
 
-// module.exports = roleMiddleware;
+
+
+module.exports = roleMiddleware;
