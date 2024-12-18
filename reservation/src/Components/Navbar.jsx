@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto ">
             <li className="nav-item">
-              <Link className="nav-link" to="/home">
+              <Link className="nav-link" to="/facility">
                 Home
               </Link>
             </li>
@@ -64,11 +64,6 @@ const Navbar = () => {
             )}
             {!isLoggedIn && (
               <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/register">
-                    Sign Up
-                  </Link>
-                </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/login">
                     Login

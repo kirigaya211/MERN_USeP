@@ -22,7 +22,7 @@ const Register = () => {
       });
       if (response.ok) {
         setMessage("Registration successfully");
-        setTimeout(() => navigate("login"), 2000);
+        setTimeout(() => navigate("/login"), 2000);
       } else {
         const error = await response.json();
         setMessage(error.message || "Registration failed, please try again");

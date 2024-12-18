@@ -29,7 +29,7 @@ const getFacilities = async (req, res, next) => {
     if (!facilities) {
       return res.status(404).json({ message: "No facilities found" });
     }
-    res.status(200).json({ facilities });
+    res.status(200).json(facilities);
   } catch (error) {
     next(error);
   }
@@ -68,8 +68,6 @@ const updateFacility = async (req, res, next) => {
     next(error);
   }
 };
-
-
 
 module.exports = {
   addFacility,

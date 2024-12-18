@@ -1,19 +1,20 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
-import { PrimeReactProvider } from 'primereact/api';
 import Navbar from "./Components/Navbar";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
+import Facility from "./Components/Facility";
 
 function App() {
   return (
     <>
       <Routes>
         <Route
-          path="/"
+          path="/facility"
           element={
             <>
               <Navbar />
+              <Facility />
             </>
           }
         />
@@ -21,15 +22,16 @@ function App() {
           path="/register"
           element={
             <>
+
               <Register />
             </>
           }
         />
-         <Route
+        <Route
           path="/login"
           element={
             <>
-                <Navbar />
+              <Navbar />
               <Login />
             </>
           }
