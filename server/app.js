@@ -27,7 +27,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/facility", facilityRoutes);
-app.use("api/reservation", reservationRoutes);
+app.use("/api/reservation", reservationRoutes);
+app.use("/uploads", express.static("uploads"));
+
 // app.use("/api/practice", practiceRoutes);
 
 app.use(errorHandler);

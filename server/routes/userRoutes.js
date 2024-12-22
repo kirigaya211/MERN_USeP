@@ -7,8 +7,10 @@ const roleMiddleware = require("../middleware/roleMiddleware");
 router.post("/register", userController.register);
 router.post("/login", userController.login);
 router.get("/profile",authMiddleware, userController.getUserProfile);
-router.put("/profile/email", authMiddleware, userController.updateEmail);
-router.put("/profile/password", authMiddleware, userController.updatePassword);
+router.put("/profile/update-name", authMiddleware, userController.updateName);
+router.put("/profile/update-email", authMiddleware, userController.updateEmail);
+router.put("/profile/update-password", authMiddleware, userController.updatePassword);
+router.delete("/profile/delete-account", authMiddleware, userController.deleteUser);
 router.get("/users-list", authMiddleware,roleMiddleware("admin"), userController.getAllUsers);
 
 

@@ -5,19 +5,23 @@ dotenv.config();
 const addFacility = async (req, res, next) => {
   try {
     const { name, description, location, capacity, price } = req.body;
+
     const existFacility = await Facility.findOne({ name });
     if (existFacility) {
       return res.status(400).json({ error: "Facility already exists" });
     }
+
     const facility = new Facility({
       name,
       description,
       location,
       capacity,
       price,
+      image: req.file ? req.file.path : null,
     });
+
     await facility.save();
-    res.status(201).json({ message: "Facility added successfully" });
+    res.status(201).json({ message: "Facility added successfully", facility });
   } catch (error) {
     next(error);
   }
@@ -69,9 +73,23 @@ const updateFacility = async (req, res, next) => {
   }
 };
 
+const getFacility = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const facility = await Facility.findById(id);
+    if (!facility) {
+      return res.status(404).json({ message: "Facility not found" });
+    }
+    res.status(200).json(facility);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   addFacility,
   getFacilities,
   deleteFacility,
   updateFacility,
+  getFacility,
 };
