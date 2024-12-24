@@ -14,7 +14,7 @@ const FacilityDetails = () => {
     const fetchFacilityDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/facility/${id}`
+          `https://mern-usep-backend.onrender.com/api/facility/${id}`
         );
         const data = await response.json();
         setFacility(data);
@@ -26,7 +26,7 @@ const FacilityDetails = () => {
     const fetchReservations = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/reservation/reserved-dates/${id}` 
+          `https://mern-usep-backend.onrender.com/api/reservation/reserved-dates/${id}` 
         );
     
         if (!response.ok) {
@@ -64,7 +64,7 @@ const FacilityDetails = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/reservation/add-reservation/",
+        "https://mern-usep-backend.onrender.com/api/reservation/add-reservation/",
         {
           method: "POST",
           headers: {
@@ -101,7 +101,7 @@ const FacilityDetails = () => {
   }
 
   const imageUrl = facility.image
-    ? `http://localhost:3001/${facility.image}`
+    ? `https://mern-usep-backend.onrender.com/${facility.image}`
     : "https://via.placeholder.com/800x400";
 
   return (

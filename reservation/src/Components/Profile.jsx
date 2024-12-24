@@ -23,7 +23,7 @@ const Profile = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:3001/api/users/profile",
+          "https://mern-usep-backend.onrender.com/api/users/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ const Profile = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        "http://localhost:3001/api/users/profile/update-name",
+        "https://mern-usep-backend.onrender.com/api/users/profile/update-name",
         {
           method: "PUT",
           headers: {
@@ -79,7 +79,7 @@ const Profile = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        "http://localhost:3001/api/users/profile/update-email",
+        "https://mern-usep-backend.onrender.com/api/users/profile/update-email",
         {
           method: "PUT",
           headers: {
@@ -104,7 +104,7 @@ const Profile = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        "http://localhost:3001/api/users/profile/update-password",
+        "https://mern-usep-backend.onrender.com/api/users/profile/update-password",
         {
           method: "PUT",
           headers: {
@@ -130,7 +130,7 @@ const Profile = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/users/profile/delete-account",
+        "https://mern-usep-backend.onrender.com/api/users/profile/delete-account",
         {
           method: "DELETE",
           headers: {

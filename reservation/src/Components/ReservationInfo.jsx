@@ -19,7 +19,7 @@ const ReservationDetails = () => {
       }
       try {
         const response = await fetch(
-          `http://localhost:3001/api/reservation/${id}`,
+          `https://mern-usep-backend.onrender.com/api/reservation/${id}`,
           {
             method: "GET",
             headers: {
@@ -47,7 +47,7 @@ const ReservationDetails = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:3001/api/reservation/cancel-reservation/${reservationId}`,
+        `https://mern-usep-backend.onrender.com/api/reservation/cancel-reservation/${reservationId}`,
         {
           method: "DELETE",
           headers: {

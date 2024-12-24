@@ -18,7 +18,7 @@ const ManageFacility = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:3001/api/facility", {
+        const response = await fetch("https://mern-usep-backend.onrender.com/api/facility", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const ManageFacility = () => {
                 {/* Facility Image */}
                 <img
                   src={
-                    `http://localhost:3001/${facility.image}` ||
+                    `https://mern-usep-backend.onrender.com/${facility.image}` ||
                     "https://via.placeholder.com/400x250"
                   }
                   alt={facility.name}

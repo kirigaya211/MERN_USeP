@@ -25,7 +25,7 @@ const ReservationForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/reservation/add-reservation/",
+        "https://mern-usep-backend.onrender.com/api/reservation/add-reservation/",
         {
           method: "POST",
           headers: {

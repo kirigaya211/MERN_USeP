@@ -29,7 +29,7 @@ const AddFacility = () => {
       }
 
       const response = await fetch(
-        "http://localhost:3001/api/facility/add-facility",
+        "https://mern-usep-backend.onrender.com/api/facility/add-facility",
         {
           method: "POST",
           headers: {

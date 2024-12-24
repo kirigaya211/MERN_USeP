@@ -19,7 +19,7 @@ const ReservationList = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:3001/api/reservation/user-reservations",
+          "https://mern-usep-backend.onrender.com/api/reservation/user-reservations",
           {
             method: "GET",
             headers: {

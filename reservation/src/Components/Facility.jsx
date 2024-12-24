@@ -7,7 +7,7 @@ const Facility = () => {
   useEffect(() => {
     const fetchFacility = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/facility");
+        const response = await fetch("https://mern-usep-backend.onrender.com/api/facility");
         const data = await response.json();
         setFacility(data);
       } catch (error) {

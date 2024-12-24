@@ -21,7 +21,7 @@ const FacilityUpdate = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:3001/api/facility/${id}`,
+          `https://mern-usep-backend.onrender.com/api/facility/${id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -43,7 +43,7 @@ const FacilityUpdate = () => {
     const fetchReservations = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/reservation/facility-reservations/${id}`
+          `https://mern-usep-backend.onrender.com/api/reservation/facility-reservations/${id}`
         );
         const data = await response.json();
 
@@ -67,7 +67,7 @@ const FacilityUpdate = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/facility/update-facility/${id}`,
+        `https://mern-usep-backend.onrender.com/api/facility/update-facility/${id}`,
         {
           method: "PUT",
           headers: {
@@ -94,7 +94,7 @@ const FacilityUpdate = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/facility/delete-facility/${id}`,
+        `https://mern-usep-backend.onrender.com/api/facility/delete-facility/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -117,7 +117,7 @@ const FacilityUpdate = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:3001/api/reservation/cancel-reservation/${reservationId}`,
+        `https://mern-usep-backend.onrender.com/api/reservation/cancel-reservation/${reservationId}`,
         {
           method: "DELETE",
           headers: {

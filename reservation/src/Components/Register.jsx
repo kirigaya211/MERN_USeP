@@ -13,7 +13,7 @@ const Register = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:3001/api/users/register", {
+      const response = await fetch("https://mern-usep-backend.onrender.com/api/users/register", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
