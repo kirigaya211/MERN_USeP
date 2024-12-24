@@ -33,7 +33,7 @@ const Facility = () => {
             >
               <img
                 src={
-                  `http://localhost:3001/${facility.image}` ||
+                  `https://mern-usep-backend.onrender.com/${facility.image}` ||
                   "https://via.placeholder.com/1200x300"
                 }
                 className="d-block w-100"
@@ -90,7 +90,7 @@ const Facility = () => {
             <div className="card shadow-sm h-100">
               <img
                 src={
-                  `http://localhost:3001/${facility.image}` ||
+                  `https://mern-usep-backend.onrender.com/${facility.image}` ||
                   "https://via.placeholder.com/400x250"
                 }
                 alt={facility.name}
