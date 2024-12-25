@@ -17,7 +17,7 @@ const Navbar = () => {
       
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="https://imgur.com/a/g1QXFrH"
+            src="https://i.imgur.com/T3EXdQe.jpeg"
             alt="Logo"
             style={{ height: "40px", marginRight: "10px" }}
           />
