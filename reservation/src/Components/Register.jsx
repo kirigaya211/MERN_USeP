@@ -40,7 +40,7 @@ const Register = () => {
       >
         <div className="text-center">
           <img
-            src="/assets/USeP-logo.jpg"
+            src="https://i.imgur.com/T3EXdQe.jpeg"
             className="rounded-circle mb-4 border"
             alt="logo"
             style={{ width: "80px", height: "80px" }}
