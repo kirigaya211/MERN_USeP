@@ -44,7 +44,7 @@ const Login = () => {
         <div className="card-body p-4">
           <div className="text-center">
             <img
-              src="/assets/USeP-logo.jpg"
+              src="https://imgur.com/a/g1QXFrH"
               className="rounded-circle mb-4 border"
               alt="logo"
               style={{ width: "80px", height: "80px" }}
