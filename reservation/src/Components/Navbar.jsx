@@ -14,17 +14,15 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-2">
       <div className="container">
-      
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
             src="https://i.imgur.com/T3EXdQe.jpeg"
             alt="Logo"
             style={{ height: "40px", marginRight: "10px" }}
           />
-          <span className=" fs-5">USeP – Resource Management Division </span>
+          <span className=" fs-5 text-truncate d-inline-block">USeP – Resource Management Division </span>
         </Link>
 
-       
         <button
           className="navbar-toggler"
           type="button"
@@ -48,12 +46,18 @@ const Navbar = () => {
             {isLoggedIn ? (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link text-secondary fw-semibold" to="/profile">
+                  <Link
+                    className="nav-link text-secondary fw-semibold"
+                    to="/profile"
+                  >
                     Profile
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-secondary fw-semibold" to="/reservation">
+                  <Link
+                    className="nav-link text-secondary fw-semibold"
+                    to="/reservation"
+                  >
                     Reservations
                   </Link>
                 </li>
@@ -78,7 +82,10 @@ const Navbar = () => {
               </>
             ) : (
               <li className="nav-item">
-                <Link className="btn text-secondary fw-semibold  btn-sm ms-2 px-4" to="/login">
+                <Link
+                  className="btn text-secondary fw-semibold  btn-sm ms-2 px-4"
+                  to="/login"
+                >
                   Login
                 </Link>
               </li>
