@@ -17,7 +17,7 @@ const Navbar = () => {
       
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="/assets/USeP-logo.jpg"
+            src="https://mern-usep-frontend.onrender.com/assets/USeP-logo.jpg"
             alt="Logo"
             style={{ height: "40px", marginRight: "10px" }}
           />
