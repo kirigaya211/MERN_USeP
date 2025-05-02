@@ -1,1 +1,1 @@
-﻿# MERN_USeP
+This facility reservation system is a web-based reservation system for the USeP - Resource Management Division. MERN Stack technology used for the development of this project which used MongoDB a non-sql database, Express.js for the restful API, React.js for the frontend with also using the Bootstrap for the components and Node.js for the Backend.
